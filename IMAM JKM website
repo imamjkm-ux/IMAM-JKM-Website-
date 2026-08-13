@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuasai Pasar — Panduan Lengkap Trading, Forex, Kripto, Saham & Investasi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080B10; --surface:#10141C; --border:#1F2733;
+    --text:#DCE2ED; --muted:#8892A3;
+    --bull:#1FD98A; --bear:#FF5C5C; --amber:#F2A93C; --blue:#4E8CFF;
+    --font-display:'Space Grotesk',sans-serif;
+    --font-body:'Inter',sans-serif;
+    --font-mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:
+      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+      var(--bg);
+    background-size:34px 34px, 34px 34px, auto;
+    color:var(--text); font-family:var(--font-body);
+    line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased;
+    max-width:760px; margin:0 auto; padding:0 20px 60px;
+  }
+  
+  /* Style untuk Header Animasi Running Text Paling Atas */
+  .top-banner {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 20px 0 10px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--amber);
+  }
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background: rgba(31, 217, 138, 0.1);
+    border: 1px solid var(--bull);
+    border-radius: 6px;
+    padding: 6px 0;
+    margin-top: 6px;
+  }
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 12s linear infinite;
+    color: var(--bull);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  @keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+  }
+
+  h1,h2,h3{ font-family:var(--font-display); font-weight:700; letter-spacing:-.01em; }
+  h1{ font-size:clamp(28px,7vw,42px); line-height:1.15; margin:26px 0 14px; }
+  h2{ font-size:22px; margin:48px 0 8px; color:var(--text); display:flex; align-items:center; gap:10px; }
+  h2::before{ content:''; width:4px; height:22px; background:var(--bull); border-radius:2px; flex:none; }
+  h2 .no{
+    font-family:var(--font-mono); font-size:11px; color:var(--bg); background:var(--bull);
+    display:inline-block; padding:2px 7px; border-radius:4px; letter-spacing:.06em;
+    margin-right:2px; font-weight:700; vertical-align:middle;
+  }
+  h3{ font-size:16.5px; margin:20px 0 8px; color:var(--amber); font-family:var(--font-mono); letter-spacing:.01em; }
+  h3::before{ content:'// '; color:var(--muted); }
+  p{ margin-bottom:12px; color:var(--text); }
+  p.lede{ color:var(--muted); font-size:15px; margin-bottom:8px; font-family:var(--font-mono); }
+  ul,ol{ margin:10px 0 16px 20px; }
+  li{ margin-bottom:6px; }
+  hr{ border:none; border-top:1px dashed var(--border); margin:40px 0; }
+  strong{ color:var(--bull); font-weight:700; }
+  table{ width:100%; border-collapse:collapse; margin:14px 0 20px; font-size:13.5px; font-family:var(--font-mono); background:var(--surface); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+  th{ text-align:left; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--bg); background:var(--blue); padding:9px 10px; }
+  td{ padding:10px; border-bottom:1px solid var(--border); }
+  tr:last-child td{ border-bottom:none; }
+  tr:nth-child(even) td{ background:rgba(255,255,255,.02); }
+  .box{ background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--amber); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:14.5px; font-family:var(--font-mono); }
+  .box.risk{ border-left-color:var(--bear); }
+  .box.tip{ border-left-color:var(--bull); }
+  .box b{ color:var(--amber); }
+  .box.risk b{ color:var(--bear); }
+  .box.tip b{ color:var(--bull); }
+  dl{ margin:14px 0 20px; background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:4px 16px; }
+  dl div{ padding:10px 0; border-bottom:1px solid var(--border); }
+  dl div:last-child{ border-bottom:none; }
+  dt{ font-family:var(--font-mono); color:var(--bull); font-size:14px; font-weight:700; }
+  dt::before{ content:'$ '; color:var(--muted); }
+  dd{ color:var(--muted); font-size:14px; margin-top:3px; }
+  .disclaimer{ background:var(--surface); border:1px solid var(--bear); border-radius:8px; padding:18px; font-size:13px; color:var(--muted); margin-top:40px; }
+  .disclaimer b{ color:var(--bear); }
+
+  /* decorative candlestick strip — purely visual, static */
+  .candles{ display:flex; align-items:flex-end; gap:5px; height:56px; margin:18px 0 30px; }
+  .candles i{ display:block; width:7px; border-radius:1px; background:var(--bull); position:relative; }
+  .candles i.bear{ background:var(--bear); }
+  .candles i::before{ content:''; position:absolute; left:50%; top:-7px; transform:translateX(-50%); width:1px; height:7px; background:inherit; }
+  .candles i::after{ content:''; position:absolute; left:50%; bottom:-5px; transform:translateX(-50%); width:1px; height:5px; background:inherit; }
+
+  /* quick-jump buttons — plain anchor links, normal document flow, no sticky/grid */
+  .jumpbox{ background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px; margin:20px 0 30px; }
+  .jumpbox p{ font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-bottom:10px; }
+  .jumplinks{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+  .jumplinks a{
+    font-family:var(--font-mono); font-size:12.5px; color:var(--text); text-decoration:none;
+    background:var(--bg); border:1px solid var(--border); border-radius:20px; padding:7px 13px;
+    display:inline-block;
+  }
+  .jumplinks a:active{ background:var(--bull); color:var(--bg); border-color:var(--bull); }
+  .searchrow{ display:flex; gap:8px; }
+  .searchrow input{
+    flex:1; min-width:0; background:var(--bg); border:1px solid var(--border); border-radius:8px;
+    color:var(--text); padding:11px 12px; font-family:var(--font-body); font-size:14.5px;
+  }
+  .searchrow input::placeholder{ color:var(--muted); }
+  .searchrow button{
+    font-family:var(--font-mono); font-weight:700; font-size:13px; background:var(--bull);
+    color:var(--bg); border:none; border-radius:8px; padding:0 18px; cursor:pointer; flex:none;
+  }
+  .searchrow button:active{ background:#17c27a; }
+  #searchMsg{ font-family:var(--font-mono); font-size:12px; color:var(--amber); margin-top:8px; min-height:14px; }
+  mark{ background:var(--amber); color:var(--bg); padding:0 2px; border-radius:2px; }
+</style>
+</head>
+<body>
+
+<!-- Bagian Paling Atas Tambahan -->
+<div class="top-banner">
+  <div>Dokumentasi singkat tentang trading dan lain-lain</div>
+  <div class="marquee-container">
+    <div class="marquee-text">IMAM JKM — IMAM JKM — IMAM JKM — IMAM JKM — IMAM JKM — IMAM JKM</div>
+  </div>
+</div>
+
+<p class="lede">// PANDUAN EDUKASI FINANSIAL</p>
+<h1>Kuasai Pasar: Panduan Lengkap Trading, Forex, Kripto, Saham & Investasi</h1>
+<p class="lede" style="text-transform:none; font-family:var(--font-body); font-size:16px; color:var(--muted);">Tinggal scroll ke bawah — semua materi ada berurutan dalam satu halaman, dari dasar sampai glosarium dan FAQ.</p>
+
+<div class="candles" aria-hidden="true">
+  <i style="height:20px"></i><i class="bear" style="height:14px"></i><i style="height:32px"></i>
+  <i style="height:18px"></i><i class="bear" style="height:26px"></i><i style="height:40px"></i>
+  <i class="bear" style="height:16px"></i><i style="height:34px"></i><i style="height:24px"></i>
+  <i class="bear" style="height:20px"></i><i style="height:46px"></i><i style="height:28px"></i>
+  <i class="bear" style="height:15px"></i><i style="height:36px"></i><i style="height:22px"></i>
+  <i class="bear" style="height:30px"></i><i style="height:42px"></i><i style="height:18px"></i>
+</div>
+
+<div class="jumpbox">
+  <p>Lompat langsung ke bagian</p>
+  <div class="jumplinks">
+    <a href="#dasar">01 Dasar Investasi</a>
+    <a href="#saham">02 Saham</a>
+    <a href="#forex">03 Forex</a>
+    <a href="#kripto">04 Kripto</a>
+    <a href="#aset-lain">05 Aset Lain</a>
+    <a href="#gaya">06 Gaya Trading</a>
+    <a href="#analisis">07 Analisis</a>
+    <a href="#risiko">08 Manajemen Risiko</a>
+    <a href="#mulai">09 Cara Memulai</a>
+    <a href="#glosarium">10 Glosarium</a>
+    <a href="#faq">11 Tanya Jawab</a>
+  </div>
+  <p>Atau cari kata kunci</p>
+  <div class="searchrow">
+    <input type="text" id="searchInput" placeholder="misal: leverage, dividen, HODL..." aria-label="Cari kata kunci">
+    <button id="searchBtn" type="button">Cari</button>
+  </div>
+  <div id="searchMsg"></div>
+</div>
+
+<hr>
+
+<h2 id="dasar"><span class="no">BAGIAN 01</span>Dasar-Dasar Investasi</h2>
+<p><strong>Investasi</strong> adalah tindakan mengalokasikan uang ke suatu aset dengan harapan nilainya bertumbuh atau menghasilkan pendapatan di masa depan. Berbeda dengan menabung yang hanya menyimpan nilai, investasi mengambil risiko terukur demi potensi imbal hasil (return) yang lebih tinggi.</p>
+<p><strong>Kenapa penting?</strong> Inflasi membuat daya beli uang terus menurun. Jika uang hanya disimpan diam, nilai riilnya tergerus setiap tahun. Investasi bertujuan membuat uang tumbuh melampaui laju inflasi.</p>
+<p><strong>Bunga berbunga (compounding):</strong> Keuntungan yang diinvestasikan kembali akan menghasilkan keuntungan tambahan, dan seterusnya. Semakin panjang waktu, efeknya semakin besar — inilah kenapa mulai lebih awal sangat berpengaruh.</p>
+<p><strong>Risiko vs imbal hasil:</strong> Potensi imbal hasil yang lebih tinggi selalu diikuti risiko yang lebih tinggi. Deposito relatif aman tapi imbal hasilnya kecil; saham dan kripto berpotensi tinggi tapi fluktuasinya besar.</p>
+
+<h3>Trading vs Investasi</h3>
+<table>
+<tr><th>Aspek</th><th>Investasi</th><th>Trading</th></tr>
+<tr><td>Horizon waktu</td><td>Bulan–tahun</td><td>Detik–minggu</td></tr>
+<tr><td>Fokus analisis</td><td>Fundamental</td><td>Teknikal</td></tr>
+<tr><td>Frekuensi transaksi</td><td>Jarang</td><td>Sering</td></tr>
+<tr><td>Tujuan</td><td>Pertumbuhan jangka panjang</td><td>Profit jangka pendek</td></tr>
+</table>
+<div class="box tip"><b>Tips:</b> Pemula sebaiknya paham investasi jangka panjang dulu sebelum coba trading aktif, supaya keputusan trading lebih rasional dan tidak emosional.</div>
+
+<hr>
+
+<h2 id="saham"><span class="no">BAGIAN 02</span>Saham</h2>
+<p>Saham adalah bukti kepemilikan sebagian kecil dari suatu perusahaan. Saat membeli saham, kamu jadi salah satu pemilik perusahaan itu, sebanding dengan jumlah lembar yang dimiliki.</p>
+<p>Perusahaan menjual sebagian sahamnya ke publik lewat <strong>IPO (Initial Public Offering)</strong>. Setelah itu, saham diperdagangkan antar investor di bursa — di Indonesia disebut <strong>Bursa Efek Indonesia (BEI/IDX)</strong>. Harga naik-turun berdasarkan permintaan dan penawaran.</p>
+<p><strong>Sumber keuntungan:</strong> capital gain (selisih harga jual lebih tinggi dari beli) dan dividen (pembagian laba perusahaan ke pemegang saham).</p>
+
+<h3>Istilah penting</h3>
+<table>
+<tr><th>Istilah</th><th>Arti</th></tr>
+<tr><td>Lot</td><td>1 lot = 100 lembar saham di IDX</td></tr>
+<tr><td>IHSG</td><td>Indeks gabungan seluruh saham di BEI</td></tr>
+<tr><td>Market Cap</td><td>Harga saham × jumlah saham beredar</td></tr>
+<tr><td>PER</td><td>Rasio harga terhadap laba, menilai mahal/murahnya valuasi</td></tr>
+<tr><td>Dividend Yield</td><td>Persentase dividen tahunan terhadap harga saham</td></tr>
+<tr><td>ARA/ARB</td><td>Batas kenaikan/penurunan harga saham dalam sehari</td></tr>
+</table>
+<div class="box risk"><b>Risiko:</b> Harga saham bisa turun tajam karena kinerja perusahaan memburuk atau sentimen pasar. Selalu riset fundamental sebelum membeli.</div>
+
+<hr>
+
+<h2 id="forex"><span class="no">BAGIAN 03</span>Forex (Foreign Exchange)</h2>
+<p>Forex adalah pasar global untuk memperdagangkan mata uang satu negara terhadap mata uang negara lain — pasar finansial dengan volume terbesar di dunia, buka 24 jam pada hari kerja.</p>
+<p>Forex diperdagangkan berpasangan, misalnya <strong>USD/IDR</strong>. Mata uang pertama disebut base currency, kedua disebut quote currency. Jika USD/IDR = 15.800, artinya 1 USD setara 15.800 IDR.</p>
+
+<table>
+<tr><th>Kategori</th><th>Contoh</th><th>Karakteristik</th></tr>
+<tr><td>Major</td><td>EUR/USD, USD/JPY</td><td>Paling likuid, spread kecil</td></tr>
+<tr><td>Minor</td><td>EUR/GBP, AUD/NZD</td><td>Likuiditas cukup, tanpa USD</td></tr>
+<tr><td>Exotic</td><td>USD/IDR, USD/TRY</td><td>Likuiditas rendah, lebih volatil</td></tr>
+</table>
+
+<h3>Istilah kunci</h3>
+<ul>
+<li><strong>Pip</strong> — satuan perubahan harga terkecil.</li>
+<li><strong>Lot</strong> — ukuran volume transaksi (1 standard lot = 100.000 unit).</li>
+<li><strong>Leverage</strong> — fasilitas "pinjaman" broker agar bertransaksi lebih besar dari modal. Contoh 1:100 berarti modal $100 bisa mengendalikan posisi $10.000 — memperbesar potensi untung sekaligus rugi.</li>
+<li><strong>Margin</strong> — dana jaminan untuk membuka posisi leverage.</li>
+<li><strong>Spread</strong> — selisih harga beli (ask) dan jual (bid), jadi salah satu biaya transaksi.</li>
+<li><strong>Swap</strong> — biaya/bunga jika posisi dibiarkan terbuka melewati hari.</li>
+</ul>
+<div class="box risk"><b>Risiko:</b> Leverage tinggi bisa memperbesar untung dengan cepat, tapi juga bisa menghabiskan modal (margin call) dalam waktu singkat jika salah arah.</div>
+
+<hr>
+
+<h2 id="kripto"><span class="no">BAGIAN 04</span>Cryptocurrency (Kripto)</h2>
+<p>Kripto adalah aset digital yang memakai kriptografi dan teknologi <strong>blockchain</strong> untuk mencatat kepemilikan dan transaksi secara terdesentralisasi, tanpa perantara bank atau otoritas pusat.</p>
+<p><strong>Blockchain</strong> adalah buku besar digital terdistribusi yang mencatat setiap transaksi dalam "blok" yang saling terhubung dan tidak bisa diubah.</p>
+<p><strong>Bitcoin (BTC)</strong> adalah kripto pertama dan terbesar, sering disebut "digital gold". <strong>Altcoin</strong> adalah istilah untuk semua kripto selain Bitcoin, seperti Ethereum, Solana, hingga stablecoin seperti USDT.</p>
+
+<h3>Wallet & keamanan</h3>
+<table>
+<tr><th>Jenis</th><th>Keterangan</th></tr>
+<tr><td>Hot Wallet</td><td>Terhubung internet, praktis tapi lebih rentan diretas</td></tr>
+<tr><td>Cold Wallet</td><td>Perangkat offline, lebih aman untuk penyimpanan jangka panjang</td></tr>
+<tr><td>Custodial</td><td>Kunci privat dipegang exchange</td></tr>
+<tr><td>Non-Custodial</td><td>Kamu sendiri memegang kunci privat — kendali dan tanggung jawab penuh</td></tr>
+</table>
+<div class="box"><b>Catatan:</b> Di Indonesia, perdagangan kripto diawasi Bappebti/OJK dan hanya boleh lewat exchange resmi. Cek legalitas platform sebelum bertransaksi.</div>
+<div class="box risk"><b>Risiko:</b> Volatilitas kripto sangat tinggi, harga bisa berubah puluhan persen dalam hitungan jam, dan rawan penipuan (scam token, rug pull).</div>
+
+<hr>
+
+<h2 id="aset-lain"><span class="no">BAGIAN 05</span>Aset Investasi Lainnya</h2>
+<p><strong>Obligasi</strong> — surat utang pemerintah (mis. ORI, SBR) atau korporasi. Investor meminjamkan dana dan menerima bunga (kupon) berkala plus pokok saat jatuh tempo. Relatif lebih stabil dari saham.</p>
+<p><strong>Reksa Dana</strong> — wadah investasi yang mengumpulkan dana banyak investor, dikelola Manajer Investasi profesional. Cocok untuk pemula karena diversifikasi otomatis dan modal awal kecil.</p>
+<p><strong>Emas</strong> — aset lindung nilai klasik yang cenderung stabil bahkan naik saat kondisi ekonomi tidak pasti. Bisa emas fisik, tabungan emas digital, atau reksa dana berbasis emas.</p>
+<p><strong>Properti</strong> — investasi tanah/bangunan, memberi potensi kenaikan nilai dan pendapatan sewa. Butuh modal besar, likuiditas rendah.</p>
+<p><strong>P2P Lending</strong> — platform yang mempertemukan pemberi pinjaman dengan peminjam; investor dapat imbal hasil dari bunga pinjaman, tapi ada risiko gagal bayar.</p>
+<p><strong>Kenapa diversifikasi penting?</strong> Setiap kelas aset bereaksi berbeda terhadap kondisi ekonomi yang sama. Menyebar dana ke beberapa aset yang tidak selalu bergerak searah membantu meminimalkan risiko kerugian besar.</p>
+
+<hr>
+
+<h2 id="gaya"><span class="no">BAGIAN 06</span>Gaya Trading Berdasarkan Horizon Waktu</h2>
+<table>
+<tr><th>Gaya</th><th>Durasi</th><th>Karakteristik</th></tr>
+<tr><td>Scalping</td><td>Detik–menit</td><td>Profit kecil tapi sering, butuh fokus penuh</td></tr>
+<tr><td>Day Trading</td><td>Dalam 1 hari</td><td>Dibuka & ditutup hari yang sama</td></tr>
+<tr><td>Swing Trading</td><td>Hari–minggu</td><td>Memanfaatkan ayunan harga jangka menengah</td></tr>
+<tr><td>Position Trading</td><td>Bulan–tahun</td><td>Mendekati gaya investasi, ikut tren besar</td></tr>
+</table>
+<div class="box"><b>Catatan:</b> Tidak ada gaya yang "paling benar" — yang penting konsisten dengan waktu luang, modal, dan psikologis masing-masing.</div>
+
+<hr>
+
+<h2 id="analisis"><span class="no">BAGIAN 07</span>Analisis Fundamental vs Teknikal</h2>
+<p><strong>Analisis Fundamental</strong> — menilai nilai "sebenarnya" suatu aset dari laporan keuangan perusahaan, suku bunga & kebijakan bank sentral (forex), adopsi teknologi & tokenomics (kripto), serta berita ekonomi/geopolitik.</p>
+<p><strong>Analisis Teknikal</strong> — mempelajari pergerakan harga historis dan volume untuk memprediksi arah harga, lewat grafik candlestick, support & resistance, dan indikator seperti Moving Average, RSI, MACD.</p>
+
+<table>
+<tr><th>Indikator</th><th>Fungsi</th></tr>
+<tr><td>Moving Average</td><td>Meratakan pergerakan harga untuk melihat arah tren</td></tr>
+<tr><td>RSI</td><td>Mengukur kondisi overbought/oversold</td></tr>
+<tr><td>MACD</td><td>Mengukur momentum & potensi pembalikan tren</td></tr>
+<tr><td>Bollinger Bands</td><td>Mengukur volatilitas & area pembalikan</td></tr>
+<tr><td>Support & Resistance</td><td>Level harga yang historisnya sulit ditembus</td></tr>
+</table>
+
+<hr>
+
+<h2 id="risiko"><span class="no">BAGIAN 08</span>Manajemen Risiko & Psikologi Trading</h2>
+<p><strong>Position sizing</strong> — besar dana per transaksi, umumnya disarankan tidak lebih dari 1–2% modal per posisi.</p>
+<p><strong>Stop loss & take profit</strong> — batas otomatis untuk membatasi kerugian atau mengunci keuntungan sebelum emosi mengambil alih.</p>
+<p><strong>Risk/reward ratio</strong> — perbandingan potensi rugi vs untung, idealnya minimal 1:2.</p>
+<p><strong>Diversifikasi</strong> — sebar modal ke beberapa aset agar tidak bergantung satu pergerakan harga.</p>
+<p><strong>FOMO & panic selling</strong> — dua jebakan psikologis paling umum: beli karena takut ketinggalan momentum, dan jual panik saat harga turun tanpa rencana jelas.</p>
+<p><strong>Trading plan & jurnal</strong> — rencana tertulis kriteria masuk/keluar posisi, dan catatan evaluasi tiap transaksi.</p>
+<div class="box risk"><b>Risiko:</b> Tidak ada strategi yang selalu profit 100%. Trading dan investasi selalu mengandung kemungkinan kehilangan modal — jangan pakai dana kebutuhan pokok.</div>
+
+<hr>
+
+<h2 id="mulai"><span class="no">BAGIAN 09</span>Cara Memulai untuk Pemula</h2>
+<ol>
+<li><strong>Tentukan tujuan & horizon waktu</strong> — dana pensiun, pendidikan anak, atau trading aktif? Tujuan menentukan instrumen yang cocok.</li>
+<li><strong>Bangun dana darurat dulu</strong> — idealnya setara 3–6 bulan pengeluaran, di instrumen likuid.</li>
+<li><strong>Pelajari instrumen yang dipilih</strong> — pahami cara kerja, risiko, dan biayanya.</li>
+<li><strong>Pilih platform/broker resmi</strong> — pastikan terdaftar OJK/Bappebti.</li>
+<li><strong>Mulai dengan modal kecil</strong> — uji strategi dan psikologi diri sebelum menambah
