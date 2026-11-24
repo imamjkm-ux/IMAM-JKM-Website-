@@ -2,312 +2,439 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kuasai Pasar — Panduan Lengkap Trading, Forex, Kripto, Saham & Investasi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JKM CREATIVE STUDIO | Jasa Desain Poster & Pembuatan Website</title>
+<meta name="description" content="JKM CREATIVE STUDIO: jasa desain poster mulai Rp10.000 dan pembuatan website mulai Rp75.000. Pesan mudah lewat WhatsApp.">
+<meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#080B10; --surface:#10141C; --border:#1F2733;
-    --text:#DCE2ED; --muted:#8892A3;
-    --bull:#1FD98A; --bear:#FF5C5C; --amber:#F2A93C; --blue:#4E8CFF;
-    --font-display:'Space Grotesk',sans-serif;
-    --font-body:'Inter',sans-serif;
-    --font-mono:'JetBrains Mono',monospace;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  body{
-    background:
-      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
-      var(--bg);
-    background-size:34px 34px, 34px 34px, auto;
-    color:var(--text); font-family:var(--font-body);
-    line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased;
-    max-width:760px; margin:0 auto; padding:0 20px 60px;
-  }
-  
-  /* Style untuk Header Animasi Running Text Paling Atas */
-  .top-banner {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 14px;
-    margin: 20px 0 10px;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--amber);
-  }
-  .marquee-container {
-    overflow: hidden;
-    white-space: nowrap;
-    background: rgba(31, 217, 138, 0.1);
-    border: 1px solid var(--bull);
-    border-radius: 6px;
-    padding: 6px 0;
-    margin-top: 6px;
-  }
-  .marquee-text {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 12s linear infinite;
-    color: var(--bull);
-    font-weight: 700;
-    letter-spacing: 0.1em;
-  }
-  @keyframes marquee {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-  }
+:root{--bg:#000;--bg2:#0b0d12;--card:#10131a;--line:#1f2430;--blue:#1f4bff;--blue2:#4d79ff;--white:#fff;--mute:#9aa3b5;
+--d:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--b:'Instrument Sans','Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--white);font-family:var(--b);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom,0)}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--blue2);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+section{padding:84px 0}
+h1,h2,h3{font-family:var(--d);line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,5vw,3rem);margin-bottom:14px;max-width:18ch}
+.lead{color:var(--mute);max-width:56ch;margin-bottom:38px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.97rem;border:1px solid transparent;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s,border-color .25s;font-family:var(--b)}
+.btn-p{background:var(--blue);color:#fff;box-shadow:0 8px 28px -8px rgba(31,75,255,.7)}
+.btn-p:hover{background:var(--blue2);transform:translateY(-3px);box-shadow:0 14px 34px -8px rgba(77,121,255,.8)}
+.btn-g{border-color:#3a4256;color:#fff;background:transparent}
+.btn-g:hover{border-color:var(--blue2);background:rgba(31,75,255,.12);transform:translateY(-3px)}
+.btn-w{background:#fff;color:#000}.btn-w:hover{transform:translateY(-3px);background:#e6ecff}
 
-  h1,h2,h3{ font-family:var(--font-display); font-weight:700; letter-spacing:-.01em; }
-  h1{ font-size:clamp(28px,7vw,42px); line-height:1.15; margin:26px 0 14px; }
-  h2{ font-size:22px; margin:48px 0 8px; color:var(--text); display:flex; align-items:center; gap:10px; }
-  h2::before{ content:''; width:4px; height:22px; background:var(--bull); border-radius:2px; flex:none; }
-  h2 .no{
-    font-family:var(--font-mono); font-size:11px; color:var(--bg); background:var(--bull);
-    display:inline-block; padding:2px 7px; border-radius:4px; letter-spacing:.06em;
-    margin-right:2px; font-weight:700; vertical-align:middle;
-  }
-  h3{ font-size:16.5px; margin:20px 0 8px; color:var(--amber); font-family:var(--font-mono); letter-spacing:.01em; }
-  h3::before{ content:'// '; color:var(--muted); }
-  p{ margin-bottom:12px; color:var(--text); }
-  p.lede{ color:var(--muted); font-size:15px; margin-bottom:8px; font-family:var(--font-mono); }
-  ul,ol{ margin:10px 0 16px 20px; }
-  li{ margin-bottom:6px; }
-  hr{ border:none; border-top:1px dashed var(--border); margin:40px 0; }
-  strong{ color:var(--bull); font-weight:700; }
-  table{ width:100%; border-collapse:collapse; margin:14px 0 20px; font-size:13.5px; font-family:var(--font-mono); background:var(--surface); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
-  th{ text-align:left; font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--bg); background:var(--blue); padding:9px 10px; }
-  td{ padding:10px; border-bottom:1px solid var(--border); }
-  tr:last-child td{ border-bottom:none; }
-  tr:nth-child(even) td{ background:rgba(255,255,255,.02); }
-  .box{ background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--amber); border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0; font-size:14.5px; font-family:var(--font-mono); }
-  .box.risk{ border-left-color:var(--bear); }
-  .box.tip{ border-left-color:var(--bull); }
-  .box b{ color:var(--amber); }
-  .box.risk b{ color:var(--bear); }
-  .box.tip b{ color:var(--bull); }
-  dl{ margin:14px 0 20px; background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:4px 16px; }
-  dl div{ padding:10px 0; border-bottom:1px solid var(--border); }
-  dl div:last-child{ border-bottom:none; }
-  dt{ font-family:var(--font-mono); color:var(--bull); font-size:14px; font-weight:700; }
-  dt::before{ content:'$ '; color:var(--muted); }
-  dd{ color:var(--muted); font-size:14px; margin-top:3px; }
-  .disclaimer{ background:var(--surface); border:1px solid var(--bear); border-radius:8px; padding:18px; font-size:13px; color:var(--muted); margin-top:40px; }
-  .disclaimer b{ color:var(--bear); }
+/* NAVBAR */
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0);background:rgba(0,0,0,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--d);font-weight:800;font-size:1rem;letter-spacing:.01em}
+.logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--blue);font-style:normal;font-size:.8rem}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a:not(.btn){color:var(--mute);font-size:.94rem;transition:color .2s}
+.menu a:not(.btn):hover{color:#fff}
+.menu .btn{padding:10px 20px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.burger.on span:nth-child(1){top:22px;transform:rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){top:22px;transform:rotate(-45deg)}
 
-  /* decorative candlestick strip — purely visual, static */
-  .candles{ display:flex; align-items:flex-end; gap:5px; height:56px; margin:18px 0 30px; }
-  .candles i{ display:block; width:7px; border-radius:1px; background:var(--bull); position:relative; }
-  .candles i.bear{ background:var(--bear); }
-  .candles i::before{ content:''; position:absolute; left:50%; top:-7px; transform:translateX(-50%); width:1px; height:7px; background:inherit; }
-  .candles i::after{ content:''; position:absolute; left:50%; bottom:-5px; transform:translateX(-50%); width:1px; height:5px; background:inherit; }
+/* HERO */
+.hero{padding:140px 0 70px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;right:-160px;top:-120px;background:radial-gradient(circle,rgba(31,75,255,.5),transparent 65%);filter:blur(30px);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}
+.hero h1{font-size:clamp(2.4rem,7.2vw,4.6rem);font-weight:800;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--blue2)}
+.hero p{color:var(--mute);font-size:1.08rem;max-width:50ch;margin-bottom:32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:30px;margin-top:40px;flex-wrap:wrap}
+.stats b{font-family:var(--d);font-size:1.5rem;display:block}
+.stats span{color:var(--mute);font-size:.85rem}
+.load{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.load:nth-child(2){animation-delay:.12s}.load:nth-child(3){animation-delay:.24s}.load:nth-child(4){animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 
-  /* quick-jump buttons — plain anchor links, normal document flow, no sticky/grid */
-  .jumpbox{ background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px; margin:20px 0 30px; }
-  .jumpbox p{ font-family:var(--font-mono); font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-bottom:10px; }
-  .jumplinks{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
-  .jumplinks a{
-    font-family:var(--font-mono); font-size:12.5px; color:var(--text); text-decoration:none;
-    background:var(--bg); border:1px solid var(--border); border-radius:20px; padding:7px 13px;
-    display:inline-block;
-  }
-  .jumplinks a:active{ background:var(--bull); color:var(--bg); border-color:var(--bull); }
-  .searchrow{ display:flex; gap:8px; }
-  .searchrow input{
-    flex:1; min-width:0; background:var(--bg); border:1px solid var(--border); border-radius:8px;
-    color:var(--text); padding:11px 12px; font-family:var(--font-body); font-size:14.5px;
-  }
-  .searchrow input::placeholder{ color:var(--muted); }
-  .searchrow button{
-    font-family:var(--font-mono); font-weight:700; font-size:13px; background:var(--bull);
-    color:var(--bg); border:none; border-radius:8px; padding:0 18px; cursor:pointer; flex:none;
-  }
-  .searchrow button:active{ background:#17c27a; }
-  #searchMsg{ font-family:var(--font-mono); font-size:12px; color:var(--amber); margin-top:8px; min-height:14px; }
-  mark{ background:var(--amber); color:var(--bg); padding:0 2px; border-radius:2px; }
+/* hero visual */
+.visual{position:relative;height:440px}
+.poster-h{position:absolute;left:4%;top:0;width:52%;aspect-ratio:3/4;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(31,75,255,.55);transform:rotate(-6deg);animation:float 7s ease-in-out infinite;border:1px solid #2a3350}
+.browser{position:absolute;right:0;bottom:0;width:78%;border-radius:16px;background:var(--card);border:1px solid #2a3350;box-shadow:0 30px 60px -24px #000;animation:float 8s ease-in-out -3s infinite;overflow:hidden}
+@keyframes float{50%{translate:0 -12px}}
+.bar{display:flex;gap:6px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.bar i{width:9px;height:9px;border-radius:50%;background:#2c3345}
+.mock{padding:16px;display:grid;gap:10px}
+.mock .l{height:10px;border-radius:6px;background:#2a3147}
+.mock .hd{height:46px;border-radius:10px;background:linear-gradient(120deg,var(--blue),#0a1a66)}
+.mock .row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mock .row div{height:54px;border-radius:8px;background:#1a2030}
+
+/* SERVICES */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;transition:transform .35s,border-color .35s,box-shadow .35s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:var(--blue);box-shadow:0 24px 50px -24px rgba(31,75,255,.6)}
+.card h3{font-size:1.55rem;margin-bottom:8px}
+.card>p{color:var(--mute);margin-bottom:22px}
+.plist{list-style:none;display:grid;gap:10px}
+.plist li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);transition:border-color .25s,background .25s}
+.plist li:hover{border-color:var(--blue2);background:#0e1322}
+.plist span{font-weight:500}
+.plist small{display:block;color:var(--mute);font-weight:400;font-size:.8rem}
+.plist b{font-family:var(--d);color:var(--blue2);white-space:nowrap;margin-right:6px}
+.order{padding:9px 16px;font-size:.85rem}
+.pl-r{display:flex;align-items:center}
+
+/* PORTFOLIO */
+.note{display:inline-block;padding:6px 14px;border:1px dashed #3a4256;border-radius:999px;color:var(--mute);font-size:.82rem;margin-bottom:26px}
+.port{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.work{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .35s,border-color .35s}
+.work:hover{transform:translateY(-6px);border-color:var(--blue)}
+.work .art{aspect-ratio:4/5;overflow:hidden}
+.work .art svg{width:100%;height:100%;transition:transform .6s}
+.work:hover .art svg{transform:scale(1.05)}
+.work.web .art{aspect-ratio:16/10;padding:18px;background:#080a10}
+.work.web{grid-column:span 1}
+.cap{padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cap b{font-family:var(--d);font-size:1rem}
+.tag{font-size:.72rem;padding:4px 10px;border-radius:999px;background:rgba(31,75,255,.18);color:#9db3ff;white-space:nowrap}
+
+/* WHY */
+.why{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.why div{padding:24px 20px;border-radius:18px;background:var(--card);border:1px solid var(--line);transition:.3s}
+.why div:hover{border-color:var(--blue);transform:translateY(-4px)}
+.why svg{width:28px;height:28px;stroke:var(--blue2);fill:none;stroke-width:1.8;margin-bottom:14px}
+.why h3{font-size:1.02rem;font-family:var(--b);font-weight:600;letter-spacing:0}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
+.step{padding:24px 20px;border-left:2px solid var(--line);position:relative;counter-increment:s;transition:border-color .3s}
+.step:hover{border-color:var(--blue)}
+.step::before{content:counter(s);font-family:var(--d);font-size:2.4rem;font-weight:800;color:var(--blue);display:block;line-height:1;margin-bottom:12px}
+.step p{font-weight:500}
+
+/* TESTI */
+.testi{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.t{padding:28px;border-radius:20px;background:linear-gradient(160deg,#121830,var(--card));border:1px solid var(--line)}
+.t q{display:block;quotes:none;margin-bottom:20px;font-size:1.02rem}
+.t span{color:var(--mute);font-size:.88rem}
+.t em{display:block;font-style:normal;font-size:.72rem;color:#9db3ff;margin-top:10px}
+
+/* FAQ */
+.faq{max-width:760px}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px;font-size:1.04rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--blue2);font-size:1.5rem;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);padding:0 0 20px;animation:rise .4s both}
+
+/* CTA + FOOTER */
+.final{border-radius:28px;padding:56px 32px;text-align:center;background:radial-gradient(circle at 50% 0,#2a52ff,#0a1a66 70%);}
+.final h2{margin-inline:auto}
+.final p{color:#d6defc;margin:0 auto 28px;max-width:46ch}
+footer{border-top:1px solid var(--line);padding:56px 0 calc(30px + env(safe-area-inset-bottom,0));margin-top:40px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+footer p,footer a{color:var(--mute);font-size:.93rem}
+footer a:hover{color:#fff}
+footer h4{font-family:var(--d);margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+.copy{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);color:var(--mute);font-size:.85rem}
+
+/* floating WA (mobile-first) */
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0));z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 28px -6px rgba(37,211,102,.6);transition:transform .25s}
+.wa:hover{transform:scale(1.1)}
+.wa svg{width:30px;height:30px;fill:#fff}
+
+.toast{position:fixed;left:16px;right:88px;bottom:calc(16px + env(safe-area-inset-bottom,0));z-index:70;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border-radius:16px;background:#12161f;border:1px solid #2a3350;font-size:.88rem;opacity:0;visibility:hidden;transform:translateY(10px);transition:.3s}
+.toast.on{opacity:1;visibility:visible;transform:none}
+.toast a,.toast button{background:none;border:0;color:var(--blue2);font:inherit;font-weight:600;cursor:pointer;padding:4px 0}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+.why,.steps{grid-template-columns:repeat(2,1fr)}
+.port,.testi{grid-template-columns:1fr 1fr}
+}
+@media(max-width:780px){
+section{padding:64px 0}
+.burger{display:block}
+.menu{position:fixed;inset:calc(66px + env(safe-area-inset-top,0)) 0 auto 0;flex-direction:column;align-items:stretch;gap:0;padding:12px 6%;background:rgba(0,0,0,.96);border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.3s}
+.menu.on{transform:none;opacity:1;visibility:visible}
+.menu a:not(.btn){padding:16px 0;border-bottom:1px solid var(--line);font-size:1.05rem;color:#fff}
+.menu .btn{margin:16px 0 8px}
+.hero{padding-top:110px}
+.hero-grid,.svc,.fg{grid-template-columns:1fr}
+.visual{height:340px;order:-1}
+.cta .btn{flex:1 1 100%}
+.port,.testi{grid-template-columns:1fr}
+.plist li{flex-wrap:wrap}
+.pl-r{width:100%;justify-content:space-between}
+.card{padding:24px}
+}
+@media(max-width:420px){.why,.steps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
-<!-- Bagian Paling Atas Tambahan -->
-<div class="top-banner">
-  <div>Dokumentasi singkat tentang trading dan lain-lain</div>
-  <div class="marquee-container">
-    <div class="marquee-text">IMAM JKM — IMAM JKM — IMAM JKM — IMAM JKM — IMAM JKM — IMAM JKM</div>
+<header>
+  <div class="wrap nav">
+    <a href="#beranda" class="logo" aria-label="JKM CREATIVE STUDIO"><i>JKM</i>JKM CREATIVE STUDIO</a>
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu">
+      <a href="#beranda">Beranda</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#harga">Harga</a>
+      <a href="#portofolio">Portofolio</a>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#kontak">Kontak</a>
+      <a href="#" class="btn btn-p wa-link" data-service="">Pesan Sekarang</a>
+    </nav>
   </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="beranda">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="load">Solusi Kreatif untuk Bisnis dan Branding Anda</h1>
+      <p class="load">Kami membantu Anda membangun identitas digital melalui desain poster profesional dan website modern dengan harga terjangkau.</p>
+      <div class="cta load">
+        <a href="#layanan" class="btn btn-g">Lihat Layanan</a>
+        <a href="#" class="btn btn-p wa-link" data-service="">Pesan Sekarang</a>
+      </div>
+      <div class="stats load">
+        <div><b>Rp10rb</b><span>Poster mulai dari</span></div>
+        <div><b>Rp75rb</b><span>Website mulai dari</span></div>
+      </div>
+    </div>
+    <div class="visual" aria-hidden="true">
+      <div class="poster-h">
+        <svg viewBox="0 0 300 400"><rect width="300" height="400" fill="#1f4bff"/><circle cx="230" cy="90" r="120" fill="#4d79ff" opacity=".5"/><circle cx="60" cy="360" r="90" fill="#000" opacity=".35"/><text x="26" y="230" fill="#fff" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="54">GRAND</text><text x="26" y="284" fill="#fff" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="54">SALE</text><rect x="26" y="312" width="120" height="30" rx="15" fill="#fff"/><text x="44" y="333" fill="#000" font-family="Arial" font-weight="700" font-size="14">Diskon 50%</text></svg>
+      </div>
+      <div class="browser">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="mock"><div class="l" style="width:40%"></div><div class="hd"></div><div class="l" style="width:75%"></div><div class="row"><div></div><div></div><div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYANAN & HARGA -->
+<section id="layanan">
+  <div class="wrap">
+    <h2 class="rv">Dua layanan, satu tujuan: bisnis Anda terlihat profesional</h2>
+    <p class="lead rv">Pilih layanan, klik pesan, dan kebutuhan Anda langsung kami terima lewat WhatsApp.</p>
+    <div class="svc" id="harga">
+      <!-- LAYANAN A: edit nama & harga di sini. Atribut data-service dipakai sebagai isi pesan WhatsApp -->
+      <article class="card rv">
+        <h3>Jasa Desain Poster</h3>
+        <p>Desain menarik dan profesional untuk promosi bisnis, produk, acara, dan media sosial.</p>
+        <ul class="plist">
+          <li><span>Poster Sederhana<small>Layout bersih, cepat jadi</small></span><div class="pl-r"><b>Rp10.000</b><a href="#" class="btn btn-p order wa-link" data-service="Poster Sederhana (Rp10.000)">Pesan</a></div></li>
+          <li><span>Poster Premium<small>Detail dan efek lebih kaya</small></span><div class="pl-r"><b>Rp20.000</b><a href="#" class="btn btn-p order wa-link" data-service="Poster Premium (Rp20.000)">Pesan</a></div></li>
+        </ul>
+      </article>
+      <!-- LAYANAN B -->
+      <article class="card rv">
+        <h3>Jasa Pembuatan Website</h3>
+        <p>Website modern, responsif, dan mudah diakses melalui smartphone maupun komputer.</p>
+        <ul class="plist">
+          <li><span>Landing Page<small>Satu halaman fokus promosi</small></span><div class="pl-r"><b>Rp75.000</b><a href="#" class="btn btn-p order wa-link" data-service="Landing Page (Rp75.000)">Pesan</a></div></li>
+          <li><span>Website Profil Usaha<small>Beberapa halaman profil bisnis</small></span><div class="pl-r"><b>Rp125.000</b><a href="#" class="btn btn-p order wa-link" data-service="Website Profil Usaha (Rp125.000)">Pesan</a></div></li>
+          <li><span>Website Katalog Produk<small>Tampilkan produk dan pesan via WA</small></span><div class="pl-r"><b>Rp175.000</b><a href="#" class="btn btn-p order wa-link" data-service="Website Katalog Produk (Rp175.000)">Pesan</a></div></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PORTOFOLIO -->
+<section id="portofolio" style="background:var(--bg2)">
+  <div class="wrap">
+    <h2 class="rv">Contoh hasil desain kami</h2>
+    <span class="note rv">Semua karya di bawah adalah contoh fiktif buatan sendiri, bukan proyek pelanggan.</span>
+    <div class="port">
+      <figure class="work rv"><div class="art">
+        <svg viewBox="0 0 300 375"><rect width="300" height="375" fill="#0a0a0a"/><circle cx="150" cy="150" r="95" fill="#1f4bff"/><circle cx="150" cy="150" r="60" fill="none" stroke="#fff" stroke-width="3"/><text x="150" y="285" text-anchor="middle" fill="#fff" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="34">NIGHT FEST</text><text x="150" y="312" text-anchor="middle" fill="#9aa3b5" font-family="Arial" font-size="13">Musik Live · Sabtu 20.00</text><rect x="95" y="328" width="110" height="26" rx="13" fill="#fff"/><text x="150" y="346" text-anchor="middle" fill="#000" font-family="Arial" font-weight="700" font-size="12">Tiket Tersedia</text></svg>
+      </div><figcaption class="cap"><b>Poster Acara Musik</b><span class="tag">Contoh Fiktif</span></figcaption></figure>
+
+      <figure class="work rv"><div class="art">
+        <svg viewBox="0 0 300 375"><rect width="300" height="375" fill="#fff"/><rect y="215" width="300" height="160" fill="#1f4bff"/><circle cx="215" cy="130" r="70" fill="#dfe7ff"/><rect x="170" y="85" width="90" height="90" rx="22" fill="#000"/><text x="24" y="60" fill="#000" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="30">Kopi Pagi</text><text x="24" y="92" fill="#1f4bff" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="30">Beli 2 Gratis 1</text><text x="24" y="262" fill="#fff" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="26">Promo Minggu Ini</text><text x="24" y="290" fill="#cfd9ff" font-family="Arial" font-size="13">Contoh poster promosi produk</text></svg>
+      </div><figcaption class="cap"><b>Poster Promo Produk</b><span class="tag">Contoh Fiktif</span></figcaption></figure>
+
+      <figure class="work rv"><div class="art">
+        <svg viewBox="0 0 300 375"><rect width="300" height="375" fill="#1f4bff"/><path d="M0 250 Q80 180 150 240 T300 200 V375 H0Z" fill="#000"/><text x="26" y="80" fill="#fff" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="40">Workshop</text><text x="26" y="124" fill="#fff" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="40">Desain Dasar</text><text x="26" y="300" fill="#fff" font-family="Arial" font-size="14">Daftar gratis · Kuota 30 orang</text><rect x="26" y="316" width="110" height="28" rx="14" fill="#fff"/><text x="81" y="335" text-anchor="middle" fill="#000" font-family="Arial" font-weight="700" font-size="12">Daftar Sekarang</text></svg>
+      </div><figcaption class="cap"><b>Poster Workshop</b><span class="tag">Contoh Fiktif</span></figcaption></figure>
+
+      <figure class="work web rv"><div class="art">
+        <svg viewBox="0 0 320 200"><rect width="320" height="200" rx="10" fill="#fff"/><rect width="320" height="22" rx="10" fill="#e8ecf7"/><rect y="12" width="320" height="10" fill="#e8ecf7"/><rect x="16" y="36" width="60" height="8" rx="4" fill="#000"/><rect x="200" y="36" width="100" height="8" rx="4" fill="#c9d3f5"/><text x="16" y="86" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="20" fill="#000">Kopi Nusantara</text><text x="16" y="108" font-family="Arial" font-size="9" fill="#555">Biji kopi pilihan, diseduh dengan cinta.</text><rect x="16" y="120" width="70" height="20" rx="10" fill="#1f4bff"/><rect x="190" y="62" width="114" height="90" rx="10" fill="#1f4bff"/><circle cx="247" cy="107" r="26" fill="#fff" opacity=".9"/><rect x="16" y="160" width="288" height="26" rx="6" fill="#f0f3fc"/></svg>
+      </div><figcaption class="cap"><b>Website Profil Usaha</b><span class="tag">Contoh Fiktif</span></figcaption></figure>
+
+      <figure class="work web rv"><div class="art">
+        <svg viewBox="0 0 320 200"><rect width="320" height="200" rx="10" fill="#0d1017"/><rect width="320" height="22" rx="10" fill="#1a2030"/><rect y="12" width="320" height="10" fill="#1a2030"/><text x="16" y="48" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="14" fill="#fff">Toko Sepatu</text><g fill="#1a2030"><rect x="16" y="64" width="88" height="86" rx="8"/><rect x="116" y="64" width="88" height="86" rx="8"/><rect x="216" y="64" width="88" height="86" rx="8"/></g><g fill="#1f4bff"><rect x="30" y="80" width="60" height="34" rx="8"/><rect x="130" y="80" width="60" height="34" rx="8"/><rect x="230" y="80" width="60" height="34" rx="8"/></g><g fill="#fff"><rect x="24" y="124" width="50" height="6" rx="3"/><rect x="124" y="124" width="50" height="6" rx="3"/><rect x="224" y="124" width="50" height="6" rx="3"/></g><rect x="16" y="162" width="288" height="24" rx="12" fill="#25d366"/><text x="160" y="178" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="#fff">Pesan via WhatsApp</text></svg>
+      </div><figcaption class="cap"><b>Website Katalog Produk</b><span class="tag">Contoh Fiktif</span></figcaption></figure>
+
+      <figure class="work web rv"><div class="art">
+        <svg viewBox="0 0 320 200"><rect width="320" height="200" rx="10" fill="#1f4bff"/><rect width="320" height="22" rx="10" fill="#1a3fd8"/><rect y="12" width="320" height="10" fill="#1a3fd8"/><text x="160" y="84" text-anchor="middle" font-family="Bricolage Grotesque,Arial" font-weight="800" font-size="22" fill="#fff">Les Bahasa Inggris</text><text x="160" y="106" text-anchor="middle" font-family="Arial" font-size="10" fill="#d6defc">Daftar kelas pertama gratis</text><rect x="110" y="122" width="100" height="26" rx="13" fill="#fff"/><text x="160" y="139" text-anchor="middle" font-family="Arial" font-weight="700" font-size="10" fill="#000">Daftar Sekarang</text></svg>
+      </div><figcaption class="cap"><b>Landing Page</b><span class="tag">Contoh Fiktif</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section id="tentang">
+  <div class="wrap">
+    <h2 class="rv">Kenapa memilih JKM CREATIVE STUDIO</h2>
+    <p class="lead rv">Kami fokus pada hasil yang rapi, harga yang masuk akal, dan komunikasi yang mudah.</p>
+    <div class="why">
+      <div class="rv"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9.5c0-1 1.3-1.8 3-1.8s3 .8 3 1.8-1.3 1.6-3 2.2-3 1-3 2.1 1.3 1.9 3 1.9 3-.8 3-1.9"/></svg><h3>Harga ramah kantong</h3></div>
+      <div class="rv"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg><h3>Desain modern</h3></div>
+      <div class="rv"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><h3>Bisa dipesan secara online</h3></div>
+      <div class="rv"><svg viewBox="0 0 24 24"><path d="M20 12c0 4-3.6 7-8 7a9 9 0 0 1-3.5-.7L4 19l1.3-3.6A6.6 6.6 0 0 1 4 12c0-4 3.6-7 8-7s8 3 8 7z"/></svg><h3>Pelayanan ramah</h3></div>
+      <div class="rv"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3>Tampilan website responsif</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARA PEMESANAN -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <h2 class="rv">Cara memesan</h2>
+    <p class="lead rv">Lima langkah singkat, semua dari HP Anda.</p>
+    <div class="steps">
+      <div class="step rv"><p>Pilih layanan</p></div>
+      <div class="step rv"><p>Klik tombol pesan</p></div>
+      <div class="step rv"><p>Hubungi admin melalui WhatsApp</p></div>
+      <div class="step rv"><p>Sampaikan kebutuhan desain atau website</p></div>
+      <div class="step rv"><p>Tunggu konfirmasi harga dan pengerjaan</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI (DUMMY) -->
+<section>
+  <div class="wrap">
+    <h2 class="rv">Testimoni</h2>
+    <span class="note rv">Contoh tampilan saja. Testimoni di bawah bukan ulasan pelanggan asli.</span>
+    <div class="testi">
+      <!-- Ganti dengan ulasan asli setelah ada pelanggan, lalu hapus label contoh -->
+      <div class="t rv"><q>Desainnya rapi dan cepat selesai. Poster promonya langsung dipakai.</q><span>Nama Contoh, Pemilik Kedai</span><em>Contoh testimoni (dummy)</em></div>
+      <div class="t rv"><q>Website-nya enak dibuka di HP dan tombol pesannya langsung ke WhatsApp.</q><span>Nama Contoh, Penjual Online</span><em>Contoh testimoni (dummy)</em></div>
+      <div class="t rv"><q>Adminnya ramah dan mau menyesuaikan dengan kebutuhan usaha kecil.</q><span>Nama Contoh, Penyelenggara Acara</span><em>Contoh testimoni (dummy)</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <h2 class="rv">Pertanyaan yang sering diajukan</h2>
+    <div class="faq rv" style="margin-top:28px">
+      <!-- Sesuaikan jawaban dengan kebijakan Anda -->
+      <details><summary>Bagaimana cara memesan?</summary><p>Pilih layanan, klik tombol Pesan, lalu Anda akan diarahkan ke WhatsApp admin dengan pesan yang sudah terisi nama layanan. Sampaikan kebutuhan Anda dan tunggu konfirmasi.</p></details>
+      <details><summary>Berapa lama pengerjaan?</summary><p>Lama pengerjaan tergantung jenis layanan dan kelengkapan bahan dari Anda. Estimasi waktu akan dikonfirmasi admin saat pesanan dibahas.</p></details>
+      <details><summary>Apakah bisa revisi?</summary><p>Bisa. Jumlah revisi dan ketentuannya akan dijelaskan admin sebelum pengerjaan dimulai.</p></details>
+      <details><summary>Apakah bisa pesan dari luar kota?</summary><p>Bisa. Semua proses dilakukan online lewat WhatsApp, jadi Anda bisa memesan dari kota mana pun.</p></details>
+      <details><summary>Bagaimana sistem pembayarannya?</summary><p>Metode dan waktu pembayaran akan diinformasikan admin setelah harga dan kebutuhan disepakati.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="kontak" style="padding-bottom:20px">
+  <div class="wrap">
+    <div class="final rv">
+      <h2>Siap tampil lebih profesional?</h2>
+      <p>Ceritakan kebutuhan Anda ke admin JKM CREATIVE STUDIO lewat WhatsApp.</p>
+      <a href="#" class="btn btn-w wa-link" data-service="">Chat WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <a href="#beranda" class="logo" style="margin-bottom:14px"><i>JKM</i>JKM CREATIVE STUDIO</a>
+        <p>Jasa desain poster dan pembuatan website dengan harga terjangkau untuk bisnis Anda.</p>
+      </div>
+      <div><h4>Navigasi</h4><ul><li><a href="#beranda">Beranda</a></li><li><a href="#layanan">Layanan</a></li><li><a href="#harga">Harga</a></li><li><a href="#portofolio">Portofolio</a></li><li><a href="#tentang">Tentang Kami</a></li></ul></div>
+      <div><h4>Kontak</h4><ul><li><a href="#" class="wa-link" data-service="">WhatsApp: <span class="wa-show"></span></a></li></ul></div>
+    </div>
+    <p class="copy">&copy; <span id="yr">2026</span> JKM CREATIVE STUDIO. Semua hak dilindungi.</p>
+  </div>
+</footer>
+
+<a href="#" class="wa wa-link" data-service="" aria-label="Chat WhatsApp JKM CREATIVE STUDIO"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.100-1.500-1.100-2.800s.7-2 .9-2.300c.3-.3.600-.3.800-.3h.600c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .600l-.4.600c-.2.200-.3.400-.1.700.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.7-.1l1-1.200c.2-.3.400-.2.700-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.300z"/></svg></a>
+
+<div class="toast" id="toast" role="status">
+  <span>WhatsApp belum terbuka?</span>
+  <a href="#" target="_blank" rel="noopener">Coba lagi</a>
+  <button type="button" id="copyNum">Salin nomor</button>
 </div>
 
-<p class="lede">// PANDUAN EDUKASI FINANSIAL</p>
-<h1>Kuasai Pasar: Panduan Lengkap Trading, Forex, Kripto, Saham & Investasi</h1>
-<p class="lede" style="text-transform:none; font-family:var(--font-body); font-size:16px; color:var(--muted);">Tinggal scroll ke bawah — semua materi ada berurutan dalam satu halaman, dari dasar sampai glosarium dan FAQ.</p>
+<script>
+/* ===== PENGATURAN YANG BISA DIEDIT ===== */
+// Nomor WhatsApp admin: tulis biasa (0831-6805-9357). Script otomatis mengubahnya ke format 62...
+const WA_DISPLAY = "0831-6805-9357";
+const BRAND = "JKM CREATIVE STUDIO";
+/* ======================================= */
+const WA_NUMBER = (()=>{ let n = WA_DISPLAY.replace(/\D/g,''); if(n.startsWith('0')) n='62'+n.slice(1); return n; })();
 
-<div class="candles" aria-hidden="true">
-  <i style="height:20px"></i><i class="bear" style="height:14px"></i><i style="height:32px"></i>
-  <i style="height:18px"></i><i class="bear" style="height:26px"></i><i style="height:40px"></i>
-  <i class="bear" style="height:16px"></i><i style="height:34px"></i><i style="height:24px"></i>
-  <i class="bear" style="height:20px"></i><i style="height:46px"></i><i style="height:28px"></i>
-  <i class="bear" style="height:15px"></i><i style="height:36px"></i><i style="height:22px"></i>
-  <i class="bear" style="height:30px"></i><i style="height:42px"></i><i style="height:18px"></i>
-</div>
+// Link WhatsApp dengan pesan otomatis berisi nama layanan
+function waURL(service){
+  const msg = service
+    ? `Halo admin ${BRAND}, saya ingin memesan layanan: ${service}. Berikut kebutuhan saya: `
+    : `Halo admin ${BRAND}, saya ingin bertanya dan memesan layanan. `;
+  return `https://api.whatsapp.com/send?phone=${WA_NUMBER}&text=${encodeURIComponent(msg)}`;
+}
+const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+const toast = document.getElementById('toast');
+let toastTimer;
+document.querySelectorAll('.wa-link').forEach(a=>{
+  const url = waURL(a.dataset.service);
+  a.href = url;
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    // HP: buka di tab yang sama agar langsung membuka aplikasi WhatsApp ke chat admin
+    if(isMobile){ window.location.href = url; } else { window.open(url,'_blank','noopener'); }
+    // Cadangan jika WhatsApp tidak terbuka
+    toast.querySelector('a').href = url;
+    toast.classList.add('on');
+    clearTimeout(toastTimer); toastTimer = setTimeout(()=>toast.classList.remove('on'),9000);
+  });
+});
+document.getElementById('copyNum').addEventListener('click', ()=>{
+  const t = WA_DISPLAY;
+  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(
+    ()=>{document.getElementById('copyNum').textContent='Tersalin';},
+    ()=>{document.getElementById('copyNum').textContent=t;});
+});
+document.querySelectorAll('.wa-show').forEach(s=>s.textContent = WA_DISPLAY);
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-<div class="jumpbox">
-  <p>Lompat langsung ke bagian</p>
-  <div class="jumplinks">
-    <a href="#dasar">01 Dasar Investasi</a>
-    <a href="#saham">02 Saham</a>
-    <a href="#forex">03 Forex</a>
-    <a href="#kripto">04 Kripto</a>
-    <a href="#aset-lain">05 Aset Lain</a>
-    <a href="#gaya">06 Gaya Trading</a>
-    <a href="#analisis">07 Analisis</a>
-    <a href="#risiko">08 Manajemen Risiko</a>
-    <a href="#mulai">09 Cara Memulai</a>
-    <a href="#glosarium">10 Glosarium</a>
-    <a href="#faq">11 Tanya Jawab</a>
-  </div>
-  <p>Atau cari kata kunci</p>
-  <div class="searchrow">
-    <input type="text" id="searchInput" placeholder="misal: leverage, dividen, HODL..." aria-label="Cari kata kunci">
-    <button id="searchBtn" type="button">Cari</button>
-  </div>
-  <div id="searchMsg"></div>
-</div>
+// Menu mobile
+const burger = document.getElementById('burger'), menu = document.getElementById('menu');
+function toggleMenu(open){
+  menu.classList.toggle('on', open); burger.classList.toggle('on', open);
+  burger.setAttribute('aria-expanded', open);
+}
+burger.addEventListener('click', ()=>toggleMenu(!menu.classList.contains('on')));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
 
-<hr>
-
-<h2 id="dasar"><span class="no">BAGIAN 01</span>Dasar-Dasar Investasi</h2>
-<p><strong>Investasi</strong> adalah tindakan mengalokasikan uang ke suatu aset dengan harapan nilainya bertumbuh atau menghasilkan pendapatan di masa depan. Berbeda dengan menabung yang hanya menyimpan nilai, investasi mengambil risiko terukur demi potensi imbal hasil (return) yang lebih tinggi.</p>
-<p><strong>Kenapa penting?</strong> Inflasi membuat daya beli uang terus menurun. Jika uang hanya disimpan diam, nilai riilnya tergerus setiap tahun. Investasi bertujuan membuat uang tumbuh melampaui laju inflasi.</p>
-<p><strong>Bunga berbunga (compounding):</strong> Keuntungan yang diinvestasikan kembali akan menghasilkan keuntungan tambahan, dan seterusnya. Semakin panjang waktu, efeknya semakin besar — inilah kenapa mulai lebih awal sangat berpengaruh.</p>
-<p><strong>Risiko vs imbal hasil:</strong> Potensi imbal hasil yang lebih tinggi selalu diikuti risiko yang lebih tinggi. Deposito relatif aman tapi imbal hasilnya kecil; saham dan kripto berpotensi tinggi tapi fluktuasinya besar.</p>
-
-<h3>Trading vs Investasi</h3>
-<table>
-<tr><th>Aspek</th><th>Investasi</th><th>Trading</th></tr>
-<tr><td>Horizon waktu</td><td>Bulan–tahun</td><td>Detik–minggu</td></tr>
-<tr><td>Fokus analisis</td><td>Fundamental</td><td>Teknikal</td></tr>
-<tr><td>Frekuensi transaksi</td><td>Jarang</td><td>Sering</td></tr>
-<tr><td>Tujuan</td><td>Pertumbuhan jangka panjang</td><td>Profit jangka pendek</td></tr>
-</table>
-<div class="box tip"><b>Tips:</b> Pemula sebaiknya paham investasi jangka panjang dulu sebelum coba trading aktif, supaya keputusan trading lebih rasional dan tidak emosional.</div>
-
-<hr>
-
-<h2 id="saham"><span class="no">BAGIAN 02</span>Saham</h2>
-<p>Saham adalah bukti kepemilikan sebagian kecil dari suatu perusahaan. Saat membeli saham, kamu jadi salah satu pemilik perusahaan itu, sebanding dengan jumlah lembar yang dimiliki.</p>
-<p>Perusahaan menjual sebagian sahamnya ke publik lewat <strong>IPO (Initial Public Offering)</strong>. Setelah itu, saham diperdagangkan antar investor di bursa — di Indonesia disebut <strong>Bursa Efek Indonesia (BEI/IDX)</strong>. Harga naik-turun berdasarkan permintaan dan penawaran.</p>
-<p><strong>Sumber keuntungan:</strong> capital gain (selisih harga jual lebih tinggi dari beli) dan dividen (pembagian laba perusahaan ke pemegang saham).</p>
-
-<h3>Istilah penting</h3>
-<table>
-<tr><th>Istilah</th><th>Arti</th></tr>
-<tr><td>Lot</td><td>1 lot = 100 lembar saham di IDX</td></tr>
-<tr><td>IHSG</td><td>Indeks gabungan seluruh saham di BEI</td></tr>
-<tr><td>Market Cap</td><td>Harga saham × jumlah saham beredar</td></tr>
-<tr><td>PER</td><td>Rasio harga terhadap laba, menilai mahal/murahnya valuasi</td></tr>
-<tr><td>Dividend Yield</td><td>Persentase dividen tahunan terhadap harga saham</td></tr>
-<tr><td>ARA/ARB</td><td>Batas kenaikan/penurunan harga saham dalam sehari</td></tr>
-</table>
-<div class="box risk"><b>Risiko:</b> Harga saham bisa turun tajam karena kinerja perusahaan memburuk atau sentimen pasar. Selalu riset fundamental sebelum membeli.</div>
-
-<hr>
-
-<h2 id="forex"><span class="no">BAGIAN 03</span>Forex (Foreign Exchange)</h2>
-<p>Forex adalah pasar global untuk memperdagangkan mata uang satu negara terhadap mata uang negara lain — pasar finansial dengan volume terbesar di dunia, buka 24 jam pada hari kerja.</p>
-<p>Forex diperdagangkan berpasangan, misalnya <strong>USD/IDR</strong>. Mata uang pertama disebut base currency, kedua disebut quote currency. Jika USD/IDR = 15.800, artinya 1 USD setara 15.800 IDR.</p>
-
-<table>
-<tr><th>Kategori</th><th>Contoh</th><th>Karakteristik</th></tr>
-<tr><td>Major</td><td>EUR/USD, USD/JPY</td><td>Paling likuid, spread kecil</td></tr>
-<tr><td>Minor</td><td>EUR/GBP, AUD/NZD</td><td>Likuiditas cukup, tanpa USD</td></tr>
-<tr><td>Exotic</td><td>USD/IDR, USD/TRY</td><td>Likuiditas rendah, lebih volatil</td></tr>
-</table>
-
-<h3>Istilah kunci</h3>
-<ul>
-<li><strong>Pip</strong> — satuan perubahan harga terkecil.</li>
-<li><strong>Lot</strong> — ukuran volume transaksi (1 standard lot = 100.000 unit).</li>
-<li><strong>Leverage</strong> — fasilitas "pinjaman" broker agar bertransaksi lebih besar dari modal. Contoh 1:100 berarti modal $100 bisa mengendalikan posisi $10.000 — memperbesar potensi untung sekaligus rugi.</li>
-<li><strong>Margin</strong> — dana jaminan untuk membuka posisi leverage.</li>
-<li><strong>Spread</strong> — selisih harga beli (ask) dan jual (bid), jadi salah satu biaya transaksi.</li>
-<li><strong>Swap</strong> — biaya/bunga jika posisi dibiarkan terbuka melewati hari.</li>
-</ul>
-<div class="box risk"><b>Risiko:</b> Leverage tinggi bisa memperbesar untung dengan cepat, tapi juga bisa menghabiskan modal (margin call) dalam waktu singkat jika salah arah.</div>
-
-<hr>
-
-<h2 id="kripto"><span class="no">BAGIAN 04</span>Cryptocurrency (Kripto)</h2>
-<p>Kripto adalah aset digital yang memakai kriptografi dan teknologi <strong>blockchain</strong> untuk mencatat kepemilikan dan transaksi secara terdesentralisasi, tanpa perantara bank atau otoritas pusat.</p>
-<p><strong>Blockchain</strong> adalah buku besar digital terdistribusi yang mencatat setiap transaksi dalam "blok" yang saling terhubung dan tidak bisa diubah.</p>
-<p><strong>Bitcoin (BTC)</strong> adalah kripto pertama dan terbesar, sering disebut "digital gold". <strong>Altcoin</strong> adalah istilah untuk semua kripto selain Bitcoin, seperti Ethereum, Solana, hingga stablecoin seperti USDT.</p>
-
-<h3>Wallet & keamanan</h3>
-<table>
-<tr><th>Jenis</th><th>Keterangan</th></tr>
-<tr><td>Hot Wallet</td><td>Terhubung internet, praktis tapi lebih rentan diretas</td></tr>
-<tr><td>Cold Wallet</td><td>Perangkat offline, lebih aman untuk penyimpanan jangka panjang</td></tr>
-<tr><td>Custodial</td><td>Kunci privat dipegang exchange</td></tr>
-<tr><td>Non-Custodial</td><td>Kamu sendiri memegang kunci privat — kendali dan tanggung jawab penuh</td></tr>
-</table>
-<div class="box"><b>Catatan:</b> Di Indonesia, perdagangan kripto diawasi Bappebti/OJK dan hanya boleh lewat exchange resmi. Cek legalitas platform sebelum bertransaksi.</div>
-<div class="box risk"><b>Risiko:</b> Volatilitas kripto sangat tinggi, harga bisa berubah puluhan persen dalam hitungan jam, dan rawan penipuan (scam token, rug pull).</div>
-
-<hr>
-
-<h2 id="aset-lain"><span class="no">BAGIAN 05</span>Aset Investasi Lainnya</h2>
-<p><strong>Obligasi</strong> — surat utang pemerintah (mis. ORI, SBR) atau korporasi. Investor meminjamkan dana dan menerima bunga (kupon) berkala plus pokok saat jatuh tempo. Relatif lebih stabil dari saham.</p>
-<p><strong>Reksa Dana</strong> — wadah investasi yang mengumpulkan dana banyak investor, dikelola Manajer Investasi profesional. Cocok untuk pemula karena diversifikasi otomatis dan modal awal kecil.</p>
-<p><strong>Emas</strong> — aset lindung nilai klasik yang cenderung stabil bahkan naik saat kondisi ekonomi tidak pasti. Bisa emas fisik, tabungan emas digital, atau reksa dana berbasis emas.</p>
-<p><strong>Properti</strong> — investasi tanah/bangunan, memberi potensi kenaikan nilai dan pendapatan sewa. Butuh modal besar, likuiditas rendah.</p>
-<p><strong>P2P Lending</strong> — platform yang mempertemukan pemberi pinjaman dengan peminjam; investor dapat imbal hasil dari bunga pinjaman, tapi ada risiko gagal bayar.</p>
-<p><strong>Kenapa diversifikasi penting?</strong> Setiap kelas aset bereaksi berbeda terhadap kondisi ekonomi yang sama. Menyebar dana ke beberapa aset yang tidak selalu bergerak searah membantu meminimalkan risiko kerugian besar.</p>
-
-<hr>
-
-<h2 id="gaya"><span class="no">BAGIAN 06</span>Gaya Trading Berdasarkan Horizon Waktu</h2>
-<table>
-<tr><th>Gaya</th><th>Durasi</th><th>Karakteristik</th></tr>
-<tr><td>Scalping</td><td>Detik–menit</td><td>Profit kecil tapi sering, butuh fokus penuh</td></tr>
-<tr><td>Day Trading</td><td>Dalam 1 hari</td><td>Dibuka & ditutup hari yang sama</td></tr>
-<tr><td>Swing Trading</td><td>Hari–minggu</td><td>Memanfaatkan ayunan harga jangka menengah</td></tr>
-<tr><td>Position Trading</td><td>Bulan–tahun</td><td>Mendekati gaya investasi, ikut tren besar</td></tr>
-</table>
-<div class="box"><b>Catatan:</b> Tidak ada gaya yang "paling benar" — yang penting konsisten dengan waktu luang, modal, dan psikologis masing-masing.</div>
-
-<hr>
-
-<h2 id="analisis"><span class="no">BAGIAN 07</span>Analisis Fundamental vs Teknikal</h2>
-<p><strong>Analisis Fundamental</strong> — menilai nilai "sebenarnya" suatu aset dari laporan keuangan perusahaan, suku bunga & kebijakan bank sentral (forex), adopsi teknologi & tokenomics (kripto), serta berita ekonomi/geopolitik.</p>
-<p><strong>Analisis Teknikal</strong> — mempelajari pergerakan harga historis dan volume untuk memprediksi arah harga, lewat grafik candlestick, support & resistance, dan indikator seperti Moving Average, RSI, MACD.</p>
-
-<table>
-<tr><th>Indikator</th><th>Fungsi</th></tr>
-<tr><td>Moving Average</td><td>Meratakan pergerakan harga untuk melihat arah tren</td></tr>
-<tr><td>RSI</td><td>Mengukur kondisi overbought/oversold</td></tr>
-<tr><td>MACD</td><td>Mengukur momentum & potensi pembalikan tren</td></tr>
-<tr><td>Bollinger Bands</td><td>Mengukur volatilitas & area pembalikan</td></tr>
-<tr><td>Support & Resistance</td><td>Level harga yang historisnya sulit ditembus</td></tr>
-</table>
-
-<hr>
-
-<h2 id="risiko"><span class="no">BAGIAN 08</span>Manajemen Risiko & Psikologi Trading</h2>
-<p><strong>Position sizing</strong> — besar dana per transaksi, umumnya disarankan tidak lebih dari 1–2% modal per posisi.</p>
-<p><strong>Stop loss & take profit</strong> — batas otomatis untuk membatasi kerugian atau mengunci keuntungan sebelum emosi mengambil alih.</p>
-<p><strong>Risk/reward ratio</strong> — perbandingan potensi rugi vs untung, idealnya minimal 1:2.</p>
-<p><strong>Diversifikasi</strong> — sebar modal ke beberapa aset agar tidak bergantung satu pergerakan harga.</p>
-<p><strong>FOMO & panic selling</strong> — dua jebakan psikologis paling umum: beli karena takut ketinggalan momentum, dan jual panik saat harga turun tanpa rencana jelas.</p>
-<p><strong>Trading plan & jurnal</strong> — rencana tertulis kriteria masuk/keluar posisi, dan catatan evaluasi tiap transaksi.</p>
-<div class="box risk"><b>Risiko:</b> Tidak ada strategi yang selalu profit 100%. Trading dan investasi selalu mengandung kemungkinan kehilangan modal — jangan pakai dana kebutuhan pokok.</div>
-
-<hr>
-
-<h2 id="mulai"><span class="no">BAGIAN 09</span>Cara Memulai untuk Pemula</h2>
-<ol>
-<li><strong>Tentukan tujuan & horizon waktu</strong> — dana pensiun, pendidikan anak, atau trading aktif? Tujuan menentukan instrumen yang cocok.</li>
-<li><strong>Bangun dana darurat dulu</strong> — idealnya setara 3–6 bulan pengeluaran, di instrumen likuid.</li>
-<li><strong>Pelajari instrumen yang dipilih</strong> — pahami cara kerja, risiko, dan biayanya.</li>
-<li><strong>Pilih platform/broker resmi</strong> — pastikan terdaftar OJK/Bappebti.</li>
-<li><strong>Mulai dengan modal kecil</strong> — uji strategi dan psikologi diri sebelum menambah
+// Animasi muncul saat scroll
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);}
+}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
